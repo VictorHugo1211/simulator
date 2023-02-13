@@ -35,7 +35,7 @@ func (r *Route) LoadPositions() error {
 	if r.ID == "" {
 		return errors.New("route id not informed")
 	}
-	f, err := os.Open("destinations/" + r.ID + ".txt")
+	f, err := os.Open("/go/src/application/destinations/" + r.ID + ".txt")
 	if err != nil {
 		return err
 	}
